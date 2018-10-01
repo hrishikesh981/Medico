@@ -26,25 +26,15 @@ public class Register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
-        init_main();
+        mFirebaseAuth=FirebaseAuth.getInstance();
     }
-
-    public void init_main()
-    {
-        Button btn=(Button) findViewById(R.id.login_regactivity_but);
-
-
-
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent main_login=new Intent(Register.this,Login.class);
-                startActivity(main_login);
-            }
-        });
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser currFirebaseUser=mFirebaseAuth.getCurrentUser();
+        if (currFirebaseUser != null) {
+            gotoHome(currFirebaseUser);
+        }
     }
-
 
     public void register(View view) {
         EditText euname=findViewById(R.id.email_register);
