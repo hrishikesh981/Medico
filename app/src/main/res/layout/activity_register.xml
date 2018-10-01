@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".Register">
+
+    <EditText
+        android:id="@+id/name_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/email_register"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-71dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorTransparentWhite"
+        android:textColorHint="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/email_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="77dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/colorTransparentWhite"
+        android:textColorHint="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/passwords_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="@color/colorTransparentWhite"
+        android:textColorHint="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/password_2_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="187dp"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:textColor="@color/colorTransparentWhite"
+        android:textColorHint="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/phone_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_2_register"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Phone "
+        android:inputType="phone"
+        android:textColor="@color/colorTransparentWhite"
+        android:textColorHint="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/register_regactivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="221dp"
+        android:background="@color/colorAccent"
+        android:text="Register"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:onClick="register"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/login_regactivity_but"
+        android:layout_alignParentStart="true"
+        android:text="Already have an account?"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/login_regactivity_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="138dp"
+        android:background="@android:color/transparent"
+        android:text="LOGIN"
+        android:textColor="@color/colorAccent"
+        android:onClick="gotoLogin"/>
+</RelativeLayout>
